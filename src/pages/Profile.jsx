@@ -1,6 +1,6 @@
 import React, {useState}from 'react'
 import {getAuth} from 'firebase/auth'
-import { Navigate, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 
 export default function Profile() {
   const auth = getAuth();
