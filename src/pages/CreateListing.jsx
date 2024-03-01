@@ -157,7 +157,8 @@ export default function CreateListing() {
         const formDataCopy = {
             ...formData,
             imgUrls,
-            timestamp : serverTimestamp()
+            timestamp : serverTimestamp(),
+            userRef: auth.currentUser.uid
         };
         delete formDataCopy.images;
         !formDataCopy.offer && delete formDataCopy.discountedPrice;
@@ -232,7 +233,8 @@ export default function CreateListing() {
               min="1"
               max="50"
               required
-              className="w-full px-4 py-2 text-xl text-gray-700 bg-white border border-gray-300 transition duration-150 ease-in-out rounded focus:text-gray-700 focus:bg-white focus:border-slate-600 text-center"
+              className="w-full px-4 py-2 text-xl text-gray-700 bg-white border border-gray-300 transition duration-150 ease-in-out rounded
+               focus:text-gray-700 focus:bg-white focus:border-slate-600 text-center"
             />
           </div>
           <div>
@@ -245,7 +247,8 @@ export default function CreateListing() {
               min="1"
               max="50"
               required
-              className="w-full px-4 py-2 text-xl text-gray-700 bg-white border border-gray-300 transition duration-150 ease-in-out rounded focus:text-gray-700 focus:bg-white focus:border-slate-600 text-center"
+              className="w-full px-4 py-2 text-xl text-gray-700 bg-white border border-gray-300 transition duration-150 ease-in-out rounded
+               focus:text-gray-700 focus:bg-white focus:border-slate-600 text-center"
             />
           </div>
         </div>
@@ -458,12 +461,14 @@ export default function CreateListing() {
             accept='".jpg,.png,.jpeg'
             multiple
             required
-            className="w-full px-3 py-1.5 text-gray-700 bg-white border border-gray-300 rounded transition duration-150 ease-in-out focus:bg-white focus:border-slate-600"
+            className="w-full px-3 py-1.5 text-gray-700 bg-white border border-gray-300 rounded transition duration-150 ease-in-out
+             focus:bg-white focus:border-slate-600"
           />
         </div>
         <button
           type="submit"
-          className="mb-6 w-full px-7 py-3 bg-blue-600 rounded text-white font-medium text-sm uppercase shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+          className="mb-6 w-full px-7 py-3 bg-blue-600 rounded text-white font-medium text-sm uppercase shadow-md
+           hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
         >
           Create Listing
         </button>
