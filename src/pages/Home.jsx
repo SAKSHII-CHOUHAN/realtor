@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Slider from '../components/Slider';
-import {collection, query,where, orderBy, limit, getDocs, getDoc} from 'firebase/firestore';
+import {collection, query,where, orderBy, limit, getDocs} from 'firebase/firestore';
 import { db } from '../firebase';
 import { Link } from 'react-router-dom';
 import ListingItem from '../components/ListingItem';
